@@ -140,6 +140,18 @@ const workerConfig: WorkerConfig = {
       },
     },
     {
+      id: 'woodpecker_monitor',
+      name: 'Woodpecker CI',
+      method: 'GET',
+      target: 'https://ci.dta32.my.id/login',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+        'Accept': 'text/html',
+      },
+    },
+    {
       id: 'api_dfgs_monitor',
       name: 'DFGS (API)',
       method: 'GET',
