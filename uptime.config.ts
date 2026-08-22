@@ -3,7 +3,7 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 const pageConfig: PageConfig = {
   title: "DTA32's Projects Status Page",
   links: [
-    { link: 'https://github.com/DTA32', label: 'GitHub', highlight: true},
+    { link: 'https://github.com/DTA32', label: 'GitHub' },
     { link: 'https://mraditya.my.id/', label: 'Portfolio Web' },
     { link: 'https://dta32.my.id/', label: 'Personal Web' },
   ],
@@ -18,6 +18,7 @@ const workerConfig: WorkerConfig = {
       name: 'BDGCafe',
       method: 'GET',
       target: 'https://bdgcafe.com',
+      statusPageLink: 'https://bdgcafe.com',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
@@ -30,6 +31,7 @@ const workerConfig: WorkerConfig = {
       name: 'Portfolio Web',
       method: 'GET',
       target: 'https://mraditya.my.id',
+      statusPageLink: 'https://mraditya.my.id',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
@@ -42,6 +44,7 @@ const workerConfig: WorkerConfig = {
       name: 'Skripsi',
       method: 'GET',
       target: 'https://skrispi.mraditya.my.id',
+      statusPageLink: 'https://skrispi.mraditya.my.id',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
@@ -54,6 +57,7 @@ const workerConfig: WorkerConfig = {
       name: 'Personal Web',
       method: 'GET',
       target: 'https://dta32.my.id',
+      statusPageLink: 'https://dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
@@ -66,6 +70,7 @@ const workerConfig: WorkerConfig = {
       name: 'Kawan Ngonser',
       method: 'GET',
       target: 'https://kawan-ngonser.dta32.my.id',
+      statusPageLink: 'https://kawan-ngonser.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
@@ -78,6 +83,7 @@ const workerConfig: WorkerConfig = {
       name: 'Split Bill',
       method: 'GET',
       target: 'https://splitbill.dta32.my.id',
+      statusPageLink: 'https://splitbill.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
