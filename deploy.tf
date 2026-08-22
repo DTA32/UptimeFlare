@@ -38,6 +38,12 @@ resource "cloudflare_workers_script" "uptimeflare_worker" {
   compatibility_date  = "2025-04-02"
   compatibility_flags = ["nodejs_compat"]
 
+  # `bindings` below replaces the Worker's whole binding list on every apply, and
+  # this workflow applies on every push. Secrets added out of band (dashboard /
+  # `wrangler secret put`) would be dropped, so keep them from the previous
+  # upload -- that lets WEBHOOK_URL stay dashboard-managed and out of the repo.
+  keep_bindings = ["secret_text"]
+
   observability = {
     enabled = true
     logs = {
