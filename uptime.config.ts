@@ -249,6 +249,18 @@ const workerConfig: WorkerConfig = {
         'Accept': 'text/html',
       },
     },
+    {
+      id: 'api_bdgcafe_monitor',
+      name: 'BDGCafe (API)',
+      method: 'GET',
+      target: 'https://bdgcafe.com/api/health',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+        'Accept': 'application/json',
+      },
+    },
   ],
   callbacks: {
     // `onIncident` runs on every check while a monitor is down. Fire only inside
