@@ -21,7 +21,7 @@ const maintenances: MaintenanceConfig[] = []
 // `formatAndNotify` would normally apply are therefore re-implemented here.
 
 // How long a monitor must stay down before a DOWN message is sent.
-const GRACE_PERIOD_MINUTES = 9
+const GRACE_PERIOD_MINUTES = 3
 const TIME_ZONE = 'Asia/Jakarta'
 
 // True while `monitor` sits inside an active maintenance window.
@@ -95,6 +95,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://bdgcafe.com',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -108,6 +109,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://mraditya.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -121,6 +123,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://skrispi.mraditya.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -134,6 +137,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -147,6 +151,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://kawan-ngonser.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -160,6 +165,7 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://splitbill.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -172,6 +178,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://taliku.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -184,6 +191,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://dfgs.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -196,6 +204,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://vern.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -208,6 +217,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://tiketin.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -220,6 +230,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://ci.dta32.my.id/login',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -232,6 +243,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://api.dfgs.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -244,6 +256,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://api.tiketin.dta32.my.id',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'text/html',
@@ -256,6 +269,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://bdgcafe.com/api/health',
       expectedCodes: [200],
       timeout: 10000,
+      checkProxy: 'worker://apac-se',
       headers: {
         'User-Agent': 'Uptimeflare',
         'Accept': 'application/json',
