@@ -21,7 +21,7 @@ const maintenances: MaintenanceConfig[] = []
 // `formatAndNotify` would normally apply are therefore re-implemented here.
 
 // How long a monitor must stay down before a DOWN message is sent.
-const GRACE_PERIOD_MINUTES = 5
+const GRACE_PERIOD_MINUTES = 9
 const TIME_ZONE = 'Asia/Jakarta'
 
 // True while `monitor` sits inside an active maintenance window.

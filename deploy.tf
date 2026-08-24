@@ -57,6 +57,11 @@ resource "cloudflare_workers_script" "uptimeflare_worker" {
     new_sqlite_classes = ["RemoteChecker"]
   } : null
 
+  placement = {
+    mode     = "smart"
+    hostname = "api.tiketin.dta32.my.id"
+  }
+
   bindings = [{
     name       = "REMOTE_CHECKER_DO"
     class_name = "RemoteChecker"
@@ -72,7 +77,7 @@ resource "cloudflare_workers_cron_trigger" "uptimeflare_worker_cron" {
   account_id  = var.CLOUDFLARE_ACCOUNT_ID
   script_name = cloudflare_workers_script.uptimeflare_worker.script_name
   schedules = [{
-    cron = "*/5 * * * *" # every 1 minute, you can reduce the write counts by increase the worker settings of `kvWriteCooldownMinutes`
+    cron = "*/3 * * * *"
   }]
 }
 
