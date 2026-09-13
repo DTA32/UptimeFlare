@@ -11,7 +11,14 @@ const pageConfig: PageConfig = {
   logo: 'https://dta32.my.id/favicon.ico',
 }
 
-const maintenances: MaintenanceConfig[] = []
+const maintenances: MaintenanceConfig[] = [
+  {
+    title: 'Kubernetes cluster maintenance',
+    body: 'Some services may be temporarily unavailable during this period.',
+    start: '2026-09-14T00:00:00+07:00',
+    end: '2026-09-14T04:00:00+07:00',
+  }
+]
 
 // --- Discord notifications -------------------------------------------------
 // Delivery lives in `callbacks` below rather than in `notification.webhook` so
